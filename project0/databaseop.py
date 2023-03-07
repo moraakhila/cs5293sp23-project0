@@ -31,7 +31,7 @@ def status(db):
     query = f'''SELECT nature,COUNT(*) as inc 
                 FROM incidents 
                 GROUP BY nature
-                ORDER BY inc asc;'''
+                ORDER BY inc desc, nature asc;'''
 
     result = cur.execute(query)
     print("Sorted by Nature")

@@ -6,7 +6,7 @@ fp = tempfile.TemporaryFile()
 incidents = []
 
 def extractincidents(data):
-	print("***Extraction Started***")
+	#print("***Extraction Started***")
 	fp.write(data)
 	fp.seek(0)
 
@@ -24,15 +24,15 @@ def extractincidents(data):
 				if(line == 'Date / Time Incident Number Location Nature Incident ORI'):
 					pass
 				else:
-					print(line)
+					#print(line)
 					s1 = ""
 					ori = ""
 					word_arr = line.split(" ")
-					print(word_arr[0])
-					print(word_arr[1])
-					print(word_arr[2])
+					#print(word_arr[0])
+					#print(word_arr[1])
+					#print(word_arr[2])
 					for i in range(3,len(word_arr)):
-						if (word_arr[i] == "OK0140200" or word_arr[i] == "EMSSTAT" or word_arr[i] == "14005"):
+						if (word_arr[i] == "OK0140200" or word_arr[i] == "EMSSTAT" or word_arr[i] == "14005" or word_arr[i]=="14009"):
 							dualline = 0
 							break
 						else:
@@ -40,8 +40,8 @@ def extractincidents(data):
 
 					if dualline == 0:
 						for i in range(3,len(word_arr)):
-							if (word_arr[i] == "OK0140200" or word_arr[i] == "EMSSTAT" or word_arr[i] == "14005"):
-								print(word_arr[i])
+							if (word_arr[i] == "OK0140200" or word_arr[i] == "EMSSTAT" or word_arr[i] == "14005" or word_arr[i]=="14009"):
+								#print(word_arr[i])
 								ori = word_arr[i]
 
 							else:
@@ -56,7 +56,7 @@ def extractincidents(data):
 						if len(match) == 0 and len(s1.strip()) == 0:
 							s2 = "Nan"
 							s1 = "Nan"
-						elif len(matche) == 0:
+						elif len(match) == 0:
 							s2 = "Nan"
 						elif len(s1.strip()) == 0:
 							s1 = "Nan"
@@ -73,14 +73,14 @@ def extractincidents(data):
 									s2 = match[0] + " " + s2.strip()
 
 
-						print(s2)
-						print('subtract this :')
-						print(s1,'--',s2)
+						#print(s2)
+						#print('subtract this :')
+						#print(s1,'--',s2)
 						if s1 == "Nan":
 							lock = "Nan"
 						else:
 							lock = s1.replace(s2,"")
-						print(lock)
+						#print(lock)
 						tl.append(word_arr[0]+" "+word_arr[1])
 						tl.append(word_arr[2])
 						tl.append(lock)
@@ -113,8 +113,8 @@ def extractincidents(data):
 	for i in range(0, len(incidents)):
 		for j in range(0, len(incidents[i])):
 			dt, icn, loc, nat, incori = [k for k in incidents[i][j]]
-		print(dt,"\t",icn,"\t",loc,"\t",nat,"\t",incori)
-	print('*'*150)
+		#print(dt,"\t",icn,"\t",loc,"\t",nat,"\t",incori)
+	#print('*'*150)
 
 
 	return incidents

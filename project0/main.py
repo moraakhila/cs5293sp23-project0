@@ -29,4 +29,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     if args.incidents:
-        main(args.incidents)
+        main(args)

@@ -1,20 +1,23 @@
+# re package to use regular expressions
 import re
-import tempfile
+# pypdf to extract data from pdf
 import pypdf
+# tempfile to create temporary files
+import tempfile
 
-fp = tempfile.TemporaryFile()
 incidents = []
+fp = tempfile.TemporaryFile()
 
+# extractincidents function to extract incidents
 def extractincidents(data):
 	#print("***Extraction Started***")
 	fp.write(data)
 	fp.seek(0)
-
 	reader = pypdf.PdfReader(fp)
 	page = len(reader.pages)
 
 	for p in range(0, page):
-		tl = []
+		temp = []
 		page_data = reader.pages[p].extract_text()
 		line = ""
 		dualline = 0
@@ -66,7 +69,6 @@ def extractincidents(data):
 							else:
 								s2 = s1.split(match[0],1)[1]
 
-						#ntr = matchess[0]+ntr.strip()
 								if s2.strip().startswith("/"):
 									s2 = match[0] + s2.strip()
 								else:
@@ -81,40 +83,20 @@ def extractincidents(data):
 						else:
 							lock = s1.replace(s2,"")
 						#print(lock)
-						tl.append(word_arr[0]+" "+word_arr[1])
-						tl.append(word_arr[2])
-						tl.append(lock)
-						tl.append(s2)
-						tl.append(ori)
-						incidents.append([tl])
-
-
+						temp.append(word_arr[0]+" "+word_arr[1])
+						temp.append(word_arr[2])
+						temp.append(lock)
+						temp.append(s2)
+						temp.append(ori)
+						incidents.append([temp])
 
 					if dualline == 1:
 						dualline = 0
 						continue
 
-
-
-
-
-
-				tl = []
+				temp = []
 				line = str()
 			else:
 				line += page_data[i]
-
-
-
-
-
-
-
-	for i in range(0, len(incidents)):
-		for j in range(0, len(incidents[i])):
-			dt, icn, loc, nat, incori = [k for k in incidents[i][j]]
-		#print(dt,"\t",icn,"\t",loc,"\t",nat,"\t",incori)
-	#print('*'*150)
-
 
 	return incidents

@@ -13,14 +13,14 @@ In this project, pdf of incident summary report is downloaded from the given lin
 ## Getting Started
 
 Below are the starting steps which needs to be done before starting the project:
-1. In Ubuntu, connect to the VM instance using the following command:
- ```
+* In Ubuntu, connect to the VM instance using the following command:
+* ```
  ssh -i [path-to-private-key] [username]@[instance-external-ip]
  ```
- Create a tree structure as shown below in VM instance
+* Create a tree structure as shown below in VM instance
  ![image](https://user-images.githubusercontent.com/113566461/223589755-02fcd55b-d1d0-40bd-b336-298fac07d9e7.png)
- We need to have python installed in the instance. If not, install it using below command:
- ```
+* We need to have python installed in the instance. If not, install it using below command:
+* ```
  sudo apt-get install python3
  ```
 

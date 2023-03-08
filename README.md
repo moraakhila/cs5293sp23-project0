@@ -14,15 +14,15 @@ In this project, pdf of incident summary report is downloaded from the given lin
 
 Below are the starting steps which needs to be done before starting the project:
 1. In Ubuntu, connect to the VM instance using the following command:
-2. ```
-3. ssh -i [path-to-private-key] [username]@[instance-external-ip]
-4. ```
-5. Create a tree structure as shown below in VM instance
-6. ![image](https://user-images.githubusercontent.com/113566461/223589755-02fcd55b-d1d0-40bd-b336-298fac07d9e7.png)
-7. We need to have python installed in the instance. If not, install it using below command:
-8. ```
-9. sudo apt-get install python3
-10. ```
+ ```
+ ssh -i [path-to-private-key] [username]@[instance-external-ip]
+ ```
+ Create a tree structure as shown below in VM instance
+ ![image](https://user-images.githubusercontent.com/113566461/223589755-02fcd55b-d1d0-40bd-b336-298fac07d9e7.png)
+ We need to have python installed in the instance. If not, install it using below command:
+ ```
+ sudo apt-get install python3
+ ```
 
 
 ### Packages
@@ -39,7 +39,7 @@ Below are the starting steps which needs to be done before starting the project:
 
 ### Demo video
 
-
+![Trim](https://user-images.githubusercontent.com/113566461/223597503-c0186072-e06b-4a0b-a517-4122be8fb15d.gif)
 
 ### Executing program
 
@@ -76,7 +76,7 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
-![Trim](https://user-images.githubusercontent.com/113566461/223597503-c0186072-e06b-4a0b-a517-4122be8fb15d.gif)
+
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)

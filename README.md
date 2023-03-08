@@ -45,7 +45,7 @@ sudo apt-get install python3
 Here is the step by step explanation to run the project.
 * Clone the project into your instance:
 ```
-
+https://github.com/moraakhila/cs5293sp23-project0.git
 ```
 * Change the current working directory to cloned repository:
 ```
@@ -68,44 +68,50 @@ pipenv install pypdf
 pipenv run python project0/main.py --incidents https://www.normanok.gov/sites/default/files/documents/2023-02/2023-02-01_daily_incident_summary.pdf
 ```
 * Below is the output
-![image](https://user-images.githubusercontent.com/113566461/223601116-074cac54-5a86-45b2-89a4-c65e7fc585ff.png)
+* ![image](https://user-images.githubusercontent.com/113566461/223601116-074cac54-5a86-45b2-89a4-c65e7fc585ff.png)
 * Running pytests using below command:
 ```
 pipenv run python -m pytest
 ```
 
-## Help
+## Modules
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+* main.py
+   * This file is created in the directory project0 which call the functions of project0.py by importing the project0 directory and its functions and execute then by using command provided above. 
+* extractdata.py
+   * This script uses pypdf, re, and tempfile modules to extract data from PDF files. It processes the data page by page using pypdf, and stores the information in a list of lists. The script handles empty cells by replacing them with the 'NaN' value, and takes care of double lines as well. 
+* databaseop.py
+   * createdb - creates a database normanpd.db and returns database 
+   * populatedb - to insert data into incidents table in normanpd.db 
+   * status - Output is a list sorted first by the total number of incidents and secondarily, alphabetically by the nature. The output is seperated by a pipe (|)
 
-## Authors
+## Pytest cases
 
-Contributors names and contact info
+Below are the functions that are present in test_main.py
+* test_fetch_incidents(url)
+   * It returns True if the fetched data is an URL.
+* test_extract_data(url)
+   * Asserts if the length of incidents is greater than 0 and incident count is found.
+* test_createdb(database_name)
+   * Checks if the query is executed correctly by comparing the length of result which should be equal to 1 
+* test_populatedb(database_name)
+   * Checks if the query is executed correctly by comparing the count of result which should be greater than 0 
+* test_status(database_name)
+   * Asserts if the result is not none.
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+## Assumptions
 
-## Version History
+Below are the assumptions which I made for this project:
+1. I considered that incident ORI column has only 4 values: OK0140200, EMSSTAT, 14005, 14009.
+2. I wrote a regex with an assumption that Location is in capital letters and nature is in small letters.
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+## Bugs
 
-## License
+1. If there is no necessary packages, the code might not work.
+2. If we run the program multiple times, there will be duplicates in database.
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Github README.md]([https://github.com/matiassingers/awesome-readme](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc))
+* [W3 Schools]([https://gist.github.com/PurpleBooth/109311bb0361f32d87a2](https://www.w3schools.com/python/python_regex.asp))

@@ -76,6 +76,7 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
+![Trim](https://user-images.githubusercontent.com/113566461/223597503-c0186072-e06b-4a0b-a517-4122be8fb15d.gif)
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)

@@ -42,10 +42,36 @@ sudo apt-get install python3
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+Here is the step by step explanation to run the project.
+* Clone the project into your instance:
 ```
-code blocks for commands
+
+```
+* Change the current working directory to cloned repository:
+```
+cd cs5293sp23-project0
+```
+* Create a virtual environment
+```
+pipenv install
+```
+* Activate virtual environment
+```
+pipenv shell
+```
+* Install necessary packages
+```
+pipenv install pypdf
+```
+* Run the project using ```main.py```
+```
+pipenv run python project0/main.py --incidents https://www.normanok.gov/sites/default/files/documents/2023-02/2023-02-01_daily_incident_summary.pdf
+```
+* Below is the output
+![image](https://user-images.githubusercontent.com/113566461/223601116-074cac54-5a86-45b2-89a4-c65e7fc585ff.png)
+* Running pytests using below command:
+```
+pipenv run python -m pytest
 ```
 
 ## Help

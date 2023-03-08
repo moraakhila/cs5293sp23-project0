@@ -113,5 +113,5 @@ Below are the assumptions which I made for this project:
 
 ## Acknowledgments
 
-* [Github README.md](https://github.com/matiassingers/awesome-readme](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
-* [W3 Schools](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2](https://www.w3schools.com/python/python_regex.asp)
+* [ Github README.md ](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
+* [W3 Schools](https://www.w3schools.com/python/python_regex.asp)

@@ -1,16 +1,14 @@
 # cs5293sp23-project0
 # AKHILA MORA
 
-*Introduction* –  
-In this project, pdf of incident summary report is downloaded from the given link of norman.gov website. These incidents are stored in 5 columns in pdf. Our goal of the project is to read the content of the incidents from the pdf and create a database and then return the total number of incidents sorted numerically in decending order and the name of incidents in alphabetical order. This project is developed in Ubuntu in GCP using python.
+#Introduction:  
+In this project, pdf of incident summary report is downloaded from the given link of norman.gov website. These incidents are stored in 5 columns in pdf. Our goal of the project is to read the content of the incidents from the pdf and create a database and then return the total number of incidents sorted numerically in descending order and then name of incidents in alphabetical order. This project is developed in ubuntu in Google Cloud Platform using python.
 
 *Sources* –   
-*URL considered - https://www.normanok.gov/sites/default/files/documents/2022-03/2022-02-28_daily_incident_summary.pdf  
-Sources for Regular Expressions –   
-re.sub() – https://docs.python.org/3/library/re.html  
-re.split() – https://stackoverflow.com/questions/41220172/regex-to-splitstring-on-date-and-keep-it  
-pandas DataFrame for separating and inserting into the table (incidents) – https://www.geeksforgeeks.org/python-pandas-dataframe/  
-sqlite3 source and execution – https://docs.python.org/3.8/library/sqlite3.html*  
+URL used - https://www.normanok.gov/sites/default/files/documents/2023-02/2023-02-01_daily_incident_summary.pdf  
+sqlite3 source and execution – https://docs.python.org/3.8/library/sqlite3.html
+git tag - https://stackoverflow.com/questions/8044583/how-can-i-move-a-tag-on-a-git-branch-to-a-different-commit/8044605#8044605
+
 
 *Installation directions* –  
 In this project, packages urllib, pypdf, tempfile, re, sqlite3 and argparse are used where urllib, argparse and tempfile packages are inbuilt with python and remaining packages can be installed using commands –  

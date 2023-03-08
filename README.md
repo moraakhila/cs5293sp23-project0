@@ -1,24 +1,45 @@
 # cs5293sp23-project0
 
-# Project Title
+# Akhila Mora
 
-Simple overview of use/purpose.
+In this project, pdf of incident summary report is downloaded from the given link of norman.gov website. These incidents are stored in 5 columns in pdf. Our goal of the project is to read the content of the incidents from the pdf and create a database and then return the total number of incidents sorted numerically in decending order and the name of incidents in alphabetical order. This project is developed in Ubuntu in GCP using python. Finally, the output is displayed by seperating nature and incidents using pipe symbol (|)
 
-## Description
+## Author Details
 
-An in-depth paragraph about your project and overview of use.
+* Name: Akhila Mora
+* Email: akhila.mora@ou.edu
+* Student ID: 113531532
 
 ## Getting Started
 
-### Dependencies
+Below are the starting steps which needs to be done before starting the project:
+1. In Ubuntu, connect to the VM instance using the following command:
+2. ```
+3. ssh -i [path-to-private-key] [username]@[instance-external-ip]
+4. ```
+5. Create a tree structure as shown below in VM instance
+6. ![image](https://user-images.githubusercontent.com/113566461/223589755-02fcd55b-d1d0-40bd-b336-298fac07d9e7.png)
+7. We need to have python installed in the instance. If not, install it using below command:
+8. ```
+9. sudo apt-get install python3
+10. ```
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
 
-### Installing
+### Packages
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* urllib
+* pypdf
+* tempfile
+* re
+* sqlite3
+* argparse
+* pytest
+* os
+* sys
+
+### Demo video
+
+
 
 ### Executing program
 

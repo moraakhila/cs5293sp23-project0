@@ -1,7 +1,7 @@
 # cs5293sp23-project0
 # AKHILA MORA
 
-#Introduction:  
+# Introduction:  
 In this project, pdf of incident summary report is downloaded from the given link of norman.gov website. These incidents are stored in 5 columns in pdf. Our goal of the project is to read the content of the incidents from the pdf and create a database and then return the total number of incidents sorted numerically in descending order and then name of incidents in alphabetical order. This project is developed in ubuntu in Google Cloud Platform using python.
 
 *Sources* –   

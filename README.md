@@ -45,7 +45,7 @@ sudo apt-get install python3
 Here is the step by step explanation to run the project.
 * Clone the project into your instance:
 ```
-https://github.com/moraakhila/cs5293sp23-project0.git
+git clone https://github.com/moraakhila/cs5293sp23-project0.git
 ```
 * Change the current working directory to cloned repository:
 ```
@@ -62,6 +62,7 @@ pipenv shell
 * Install necessary packages
 ```
 pipenv install pypdf
+pipenv install pytest
 ```
 * Run the project using ```main.py```
 ```

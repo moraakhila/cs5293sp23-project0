@@ -7,6 +7,7 @@ In this project, pdf of incident summary report is downloaded from the given lin
 *Sources* –   
 URL used - https://www.normanok.gov/sites/default/files/documents/2023-02/2023-02-01_daily_incident_summary.pdf  
 sqlite3 source and execution – https://docs.python.org/3.8/library/sqlite3.html
+
 git tag - https://stackoverflow.com/questions/8044583/how-can-i-move-a-tag-on-a-git-branch-to-a-different-commit/8044605#8044605
 
 

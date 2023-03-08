@@ -18,12 +18,15 @@ Below are the starting steps which needs to be done before starting the project:
 ssh -i [path-to-private-key] [username]@[instance-external-ip]
 ```
 * Create a tree structure as shown below in VM instance:
-* ![image](https://user-images.githubusercontent.com/113566461/223589755-02fcd55b-d1d0-40bd-b336-298fac07d9e7.png)
+* ![image](https://user-images.githubusercontent.com/113566461/223599377-694e9a43-802d-48dc-87a5-bb061611409b.png)
 * We need to have python installed in the instance. If not, install it using below command:
 ```
 sudo apt-get install python3
 ```
 
+### Demo video
+
+![Trim](https://user-images.githubusercontent.com/113566461/223597503-c0186072-e06b-4a0b-a517-4122be8fb15d.gif)
 
 ### Packages
 
@@ -36,10 +39,6 @@ sudo apt-get install python3
 * pytest
 * os
 * sys
-
-### Demo video
-
-![Trim](https://user-images.githubusercontent.com/113566461/223597503-c0186072-e06b-4a0b-a517-4122be8fb15d.gif)
 
 ### Executing program
 
